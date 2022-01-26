@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 
 options = Options()
 options.add_argument('--headless')
-driver = webdriver.Chrome("C:\\Users\\naoki\\Downloads\\chromedriver", options=options)
+driver = webdriver.Chrome(executable_path="/usr/local/bin/chromedriver")
 
 base_url = 'https://suumo.jp/jj/chintai/ichiran/FR301FC005/?ar=020&bs=040&ta=04&sa=01&sngz=&po1=25&po2=99&pc=100&page=2'
 
@@ -24,7 +24,7 @@ def house_url_scraping(url):
     print(max_page)
 
     # range(max_page)を代入する
-    for page in range(max_page):
+    for page in range(2,max_page):
         print(page)
         for house in driver.find_elements(by=By.XPATH, value='//div/h2/a'):
             detail_url = house.get_attribute('href')
