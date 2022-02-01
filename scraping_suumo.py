@@ -35,7 +35,7 @@ def house_url_scraping(url):
     return detail_url_list
 
 
-def detail_elm_scrp(url):
+def detail_elm_scraping(url):
     # 物件詳細urlを読み込み各要素を取り出す。
     try:
         driver.get(url)

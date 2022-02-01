@@ -8,7 +8,7 @@ for url in url_list['url']:
     i = i + 1
     if i > 3000:
         break
-    df.loc[i] = scraping_suumo.detail_elm_scrp(url)
+    df.loc[i] = scraping_suumo.detail_elm_scraping(url)
     print(i)
     print(url)
 
